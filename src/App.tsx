@@ -1,5 +1,5 @@
 import { Routes, Route, Outlet, Link, BrowserRouter } from "react-router-dom";
-import { Home, LatestReleases, Login, Populars, Registro, Signup } from "./pages";
+import { Bettermovies, Buscador, Home, LatestReleases, Login, Logout, Populars, Registro,  } from "./pages";
 
 
 function App() {
@@ -11,7 +11,9 @@ function App() {
         <Route path="/latestReleases" element={ <LatestReleases /> } />
         <Route path="/populars" element={ <Populars /> } />
         <Route path="/registro" element={ <Registro /> } />
-        <Route path="/signup" element={ <Signup /> } />
+        <Route path="/logout" element={ <Logout /> } />
+        <Route path="/betterMovies" element={ <Bettermovies /> } />
+        <Route path="/buscador" element={ <Buscador /> } />
       </Routes>
     </BrowserRouter>
   );
