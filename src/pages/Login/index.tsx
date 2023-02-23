@@ -1,7 +1,12 @@
+import { Layout } from "../../components"
+
 const Login  = () => {
 
     return(
-        <div>Login</div>
+        <Layout>
+       
+        </Layout>
+        //  <div>Login</div>
     )
     
     }

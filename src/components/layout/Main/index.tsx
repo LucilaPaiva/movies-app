@@ -2,7 +2,7 @@ const Main = () => {
     return (
       <header>
         
-          <div >
+          <div className="main">
             Main
           </div>
       

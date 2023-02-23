@@ -2,6 +2,7 @@ import { Routes, Route, Outlet, Link, BrowserRouter } from "react-router-dom";
 import { BetterMovies, Buscador, Home, LatestReleases, Login, Logout, Populars, Registro,  } from "./pages";
 
 
+
 function App() {
   return (
     <BrowserRouter>
