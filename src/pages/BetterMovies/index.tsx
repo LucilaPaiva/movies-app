@@ -1,9 +1,9 @@
-const Bettermovies  = () => {
+const BetterMovies  = () => {
 
     return(
-        <div>Login</div>
+        <div>Better Movies</div>
     )
     
     }
     
-    export { Bettermovies }
+    export { BetterMovies }
