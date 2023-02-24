@@ -1,12 +1,11 @@
 const Main = () => {
     return (
-      <header>
-        
-          <div className="main">
-            Main
-          </div>
       
-      </header>
+        
+          <main className="main">
+            Main
+          </main>
+      
     );
   };
   

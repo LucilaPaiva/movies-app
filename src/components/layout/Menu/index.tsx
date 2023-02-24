@@ -1,9 +1,9 @@
 const Menu = () => {
     return (
         
-          <div >
+          <nav >
            Menu
-          </div>
+          </nav>
 
     );
   };
