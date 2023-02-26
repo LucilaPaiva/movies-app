@@ -1,7 +1,9 @@
+import "./styles.scss";
+
 const Menu = () => {
     return (
         
-          <nav >
+          <nav className="menu">
            Menu
           </nav>
 

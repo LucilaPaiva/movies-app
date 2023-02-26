@@ -4,9 +4,9 @@ const Login  = () => {
 
     return(
         <Layout>
-       
+            <div>Login</div>
         </Layout>
-        //  <div>Login</div>
+         
     )
     
     }
