@@ -1,7 +1,11 @@
+import { Layout } from "../../components"
+
 const Logout  = () => {
 
     return(
-        <div>Logout</div>
+        <Layout>
+            Logout
+        </Layout>
     )
     
     }

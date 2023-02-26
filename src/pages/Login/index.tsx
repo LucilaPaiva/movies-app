@@ -4,11 +4,11 @@ const Login  = () => {
 
     return(
         <Layout>
-            <div>Login</div>
+            Login
         </Layout>
          
     )
     
     }
-    
+     
     export { Login }

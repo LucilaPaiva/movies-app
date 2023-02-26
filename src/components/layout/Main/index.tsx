@@ -1,11 +1,16 @@
+import { FC, ReactNode } from "react";
 import "./styles.scss"
 
-const Main = () => {
+type Props = {
+  children: ReactNode 
+}
+
+const Main: FC<Props> = ({ children }) => {
     return (
       
         
           <main className="main">
-            Main
+            { children }
           </main>
       
     );

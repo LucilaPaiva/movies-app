@@ -1,7 +1,11 @@
+import { Layout } from "../../components";
+
 const BetterMovies  = () => {
 
     return(
-        <div>Better Movies</div>
+        <Layout>
+            BetterMovies 
+        </Layout>
     )
     
     }

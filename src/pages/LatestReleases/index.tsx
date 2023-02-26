@@ -1,7 +1,11 @@
+import { Layout } from "../../components"
+
 const LatestReleases  = () => {
 
     return(
-        <div>LatestReleases</div>
+        <Layout>
+            LatestReleases
+        </Layout>
     )
     
     }

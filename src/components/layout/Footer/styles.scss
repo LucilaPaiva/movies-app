@@ -2,20 +2,23 @@ footer{
     //background-image: linear-gradient(to rgb(160, 50, 110) rgb(122, 61, 90));
     background-color: rgb(32, 54, 54);
     position: absolute;
-    //bottom: 0;
     width: 100%;
     color: white;
     display: flex; 
     padding: 2%;
     font-weight: 1em;
+    margin-top: auto;
+    
     
 
 
     .container{
         font-size: 1em;
+        
         div{
             display: flex;
             justify-content: center;
+            
         }
         
         

@@ -1,7 +1,11 @@
+import { Layout } from "../../components"
+
 const Registro  = () => {
 
     return(
-        <div>Registro</div>
+        <Layout>
+            home 
+        </Layout>
     )
     
     }

@@ -1,8 +1,15 @@
+import { Layout } from "../../components"
+
 const Buscador  = () => {
 
-return(
-    <div>Buscador</div>
-)
+
+    return(
+        <Layout>
+            Buscador 
+        </Layout>
+         
+    )
+    
 
 }
 
