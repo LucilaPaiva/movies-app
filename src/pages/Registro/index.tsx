@@ -1,10 +1,10 @@
-import { Layout } from "../../components"
+import { Layout, SignUpForm } from "../../components"
 
 const Registro  = () => {
 
     return(
         <Layout>
-            Registro 
+            <SignUpForm /> 
         </Layout>
     )
     
