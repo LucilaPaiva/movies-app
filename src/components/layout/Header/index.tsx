@@ -1,10 +1,9 @@
+import "./styles.scss";
+
 const Header = () => {
     return (
-      <header>
-       
-          <div >
+      <header className="main-header">
             Header
-          </div>
       
       </header>
     );

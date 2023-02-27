@@ -1,0 +1,44 @@
+footer{
+    //background-image: linear-gradient(to rgb(160, 50, 110) rgb(122, 61, 90));
+    background-color: rgb(32, 54, 54);
+    position: absolute;
+    width: 100%;
+    color: white;
+    display: flex; 
+    padding: 2%;
+    font-weight: 1em;
+    margin-top: auto;
+    
+    
+
+
+    .container{
+        font-size: 1em;
+        
+        div{
+            display: flex;
+            justify-content: center;
+            
+        }
+        
+        
+    }
+
+        .footer-link{
+            color: aliceblue;
+            text-decoration: none;
+            margin-left: 0.5%;
+            
+
+    }
+
+    .footer-link:hover{
+        color: aliceblue;
+        text-decoration: none;
+
+    }
+
+
+
+
+}
