@@ -2,11 +2,17 @@ import axios from 'axios'
 
 const api = axios.create({
     baseURL: 'https://movies-app-5769d-default-rtdb.firebaseio.com/',
-    params: {
-        api_key: "prueba-api-key",
-        prueba: "prueba-2", 
-        // Aca defino tantos query params que necesito que estén en todas las solicitudes (ejemplo token)  como necesite
+
+})
+
+const apiMovie = axios.create({
+
+    baseURL: 'https://api.themoviedb.org/3/',
+
+    params:{
+        apikey: 'dab579f482d50d7227a883b2c07af67b',
     }
 })
 
-export { api }
+
+export { api, apiMovie }
