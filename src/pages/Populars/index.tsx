@@ -1,7 +1,11 @@
+import { Layout } from "../../components"
+
 const Populars  = () => {
 
     return(
-        <div>Populars</div>
+        <Layout>
+            Popular
+        </Layout>
     )
     
     }

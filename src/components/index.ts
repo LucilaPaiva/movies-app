@@ -1,1 +1,1 @@
-export { Footer, Header, Main, Menu } from "./layout";
+export { Layout } from "./layout";
