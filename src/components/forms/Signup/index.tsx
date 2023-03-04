@@ -3,6 +3,7 @@ import { Form, Button } from 'react-bootstrap'
 import { useForm} from 'react-hook-form'
 import { servicesUser } from '../../../services/users'
 import { SignUpForm } from '../../../types'
+
 //import { api } from '../../../utils/axios'
 
 
@@ -20,7 +21,7 @@ const SignUp = () => {
     }
 
     return(
-    <Form onSubmit={handleSubmit(onSubmit)}>
+    <Form className='form-signup' onSubmit={handleSubmit(onSubmit)}>
       <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label>Nombre</Form.Label>
         <Form.Control type="text" placeholder="Ingresar nombre" {...register('name')} />
