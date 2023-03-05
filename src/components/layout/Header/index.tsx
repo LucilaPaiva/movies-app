@@ -1,5 +1,5 @@
 import { Menu } from "../Menu";
-import "./styles.scss";
+
 
 
 const Header = () => {
