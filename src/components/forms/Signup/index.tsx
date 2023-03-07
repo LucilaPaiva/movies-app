@@ -3,6 +3,7 @@ import { Form, Button } from 'react-bootstrap'
 import { useForm} from 'react-hook-form'
 import { servicesUser } from '../../../services/users'
 import { SignUpForm } from '../../../types'
+import "./styles.scss"
 
 //import { api } from '../../../utils/axios'
 
@@ -25,7 +26,7 @@ const SignUp = () => {
       <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label>Nombre</Form.Label>
         <Form.Control type="text" placeholder="Ingresar nombre" {...register('name')} />
-        <Form.Text className="text-danger">
+        <Form.Text className="text-danger my-text-danger">
           Los datos ingresados son incorrectos.
         </Form.Text>
       </Form.Group>
@@ -64,7 +65,7 @@ const SignUp = () => {
 
 
       
-      <Button variant="primary" type="submit">
+      <Button variant="secondary" type="submit">
         Crear cuenta
       </Button>
     </Form>

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Layout } from "../../components";
 import { getAllPopular, getBanner } from "../../services/movies";
+import { Banner } from "../../components/commons/Banner";
+
 
 
 
@@ -10,7 +12,7 @@ const Home = () => {
 
   useEffect(() => {
 
-    getBanner().then(response => setMovies(response))
+    getBanner().then(response => setMovies(response.splice(0,6)))
     getAllPopular().then(response => setPopular(response.results))
 
 
@@ -19,7 +21,7 @@ const Home = () => {
 
   return (
     <Layout>
-        Home
+        <Banner items={movies}/>
     </Layout>
   );
 };
