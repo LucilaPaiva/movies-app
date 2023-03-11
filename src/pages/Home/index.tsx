@@ -21,7 +21,7 @@ const Home = () => {
 
   }, []);
 
-  console.log(movies, popular, topRated);
+
 
   return (
     <Layout>
