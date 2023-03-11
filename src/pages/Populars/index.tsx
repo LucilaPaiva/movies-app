@@ -4,7 +4,7 @@ const Populars  = () => {
 
     return(
         <Layout>
-            Popular
+            Populares
         </Layout>
     )
     

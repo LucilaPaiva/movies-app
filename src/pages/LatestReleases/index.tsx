@@ -4,7 +4,7 @@ const LatestReleases  = () => {
 
     return(
         <Layout>
-            LatestReleases
+            Ultimos lanzamientos
         </Layout>
     )
     
