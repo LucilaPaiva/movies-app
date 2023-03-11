@@ -7,7 +7,7 @@ const Posters: FC<SliderPosters> = ({ items, text }) => {
 
     return(
         <div className="scroll">
-            <h4 className="title">{text}</h4>
+            <div className="title">{text}</div>
             <div className="row pb-4">
                 {items.map((item: any) =>
                     <img className="col card-block" key={item.id} 
