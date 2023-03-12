@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { BASE_IMAGE } from "../../../constants";
 import { GridCardPosters } from "../../../types";
+import './styles.scss';
 
 
 

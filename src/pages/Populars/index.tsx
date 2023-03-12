@@ -6,25 +6,21 @@ import { getAllPopular } from "../../services/movies";
 
 const Populars  = () => {
 
-    const [movies, setMovies] = useState([]);
-    //const [popular, setPopular] = useState([]);
+    const [popular, setPopular] = useState([]);
 
 useEffect(() => {
 
         
     getAllPopular().then(response => {
-        setMovies(response.results)})
+    setPopular(response.results)})
     
 }, []);
 
-
-
-
-
+console.log(popular);
 
     return(
         <Layout>
-            <GridMovies items={movies} text={"Popular Movies"} />
+            <GridMovies items={popular} text={"Populars Movies"} />
         </Layout>
     )
     
