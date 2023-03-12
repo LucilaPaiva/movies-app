@@ -13,7 +13,6 @@ const Posters: FC<SliderPosters> = ({ items, text }) => {
                     <img className="col card-block" key={item.id} 
                     src={`${BASE_IMAGE + item.poster_path}`} 
                     alt= "First slide"
-                    
                     />
                 )}
             </div>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Layout } from "../../components"
 import { GridMovies } from "../../components/commons/GridMovies";
-import { getAllLatestReleases, getAllMovieUpcoming } from "../../services/movies";
+import { getAllMovieUpcoming } from "../../services/movies";
     
 
     
@@ -25,26 +25,3 @@ import { getAllLatestReleases, getAllMovieUpcoming } from "../../services/movies
     }
         
     export { LatestReleases }
-
-    // const MovieUpcoming  = () => {
-
-    //     const [movieUpcoming, setMovieUpcoming] = useState([]);
-    
-    // useEffect(() => {
-            
-    //     getAllMovieUpcoming().then(response => {
-    //     setMovieUpcoming(response.results)})
-        
-    // }, []);
-
-    // console.log(MovieUpcoming)
-    
-    //     return(
-    //         <Layout>
-    //             <GridMovies items={MovieUpcoming} text={"Movie Upcoming"} />
-    //         </Layout>
-    //     )
-        
-    // }
-        
-    // export { MovieUpcoming }

@@ -25,10 +25,16 @@ export type SliderPosters ={
     text: string
 }
 
-//type para Grilla de Movies Populares, Better movies, 
+//type para Grilla de Movies 
 
 export type GridCardPosters ={
     items: [] | any
     text: string
+}
+
+// type para details
+
+export type Details ={
+    items: [] | any
 }
 
