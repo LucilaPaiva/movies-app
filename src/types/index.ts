@@ -34,7 +34,7 @@ export type GridCardPosters ={
 
 // type para details
 
-export type Details ={
+export type DetailsType ={
     items: [] | any
 }
 
