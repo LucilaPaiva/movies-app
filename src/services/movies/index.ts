@@ -28,6 +28,13 @@ const getSearchMovie = async () => {
   return response.data;
 };
 
+const getAllMovieUpcoming = async () => {
+  const response = await apiMovies.get(endpoints.MOVIE_UPCOMING);
+  return response.data;
+};
+
+
+
   // MOVIE_POPULAR: '/movie/popular', //populares.
   // MOVIE_LATEST: '/movie/latest', //últimos lanzamientos/latest releases.
   // MOVIE_UPCOMING: '/movie/upcoming', // Proximamente.
@@ -36,4 +43,4 @@ const getSearchMovie = async () => {
 
 
 
-export { getAllPopular, getBanner, getAllLatestReleases, getAllTopRated, getSearchMovie };
+export { getAllPopular, getBanner, getAllLatestReleases, getAllTopRated, getSearchMovie, getAllMovieUpcoming };
