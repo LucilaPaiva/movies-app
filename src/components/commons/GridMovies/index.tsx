@@ -27,6 +27,6 @@ const GridMovies: FC<GridCardPosters> = ({ items, text}) =>{
     );
 }
 
-console.log(DetailsPage)
+
 
 export { GridMovies }

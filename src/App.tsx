@@ -10,7 +10,7 @@ function App() {
         <Route path="/" >
           <Route index element={ <Home /> } />
           <Route path="login" element={ <Login /> } />
-          <Route path="recently" element={ <LatestReleases /> } />
+          <Route path="latestReleases" element={ <LatestReleases /> } />
           <Route path="populars" element={ <Populars /> } />
           <Route path="registro" element={ <Registro /> } />
           <Route path="logout" element={ <Logout /> } />
