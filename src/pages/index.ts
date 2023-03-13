@@ -6,3 +6,4 @@ export { Logout  } from "./Logout";
 export { Login  } from "./Login";
 export { Registro } from "./Registro";
 export { BetterMovies } from "./BetterMovies";
+export { DetailsPage } from "./DetailsPage";
