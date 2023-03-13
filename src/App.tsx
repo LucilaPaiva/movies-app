@@ -10,13 +10,13 @@ function App() {
         <Route path="/" >
           <Route index element={ <Home /> } />
           <Route path="login" element={ <Login /> } />
-          <Route path="latestReleases" element={ <LatestReleases /> } />
+          <Route path="recently" element={ <LatestReleases /> } />
           <Route path="populars" element={ <Populars /> } />
           <Route path="registro" element={ <Registro /> } />
           <Route path="logout" element={ <Logout /> } />
           <Route path="betterMovies" element={ <BetterMovies /> } />
           <Route path="buscador" element={ <Buscador /> } />
-          <Route path="detailsPage" element={ <DetailsPage /> } />
+          <Route path="movie/:id" element={ <DetailsPage /> } />
           
         </Route>
       </Routes>

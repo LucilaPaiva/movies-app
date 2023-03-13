@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Layout } from "../../components"
 import { GridMovies } from "../../components/commons/GridMovies";
-import { getAllMovieUpcoming } from "../../services/movies";
+import { getAllLatestReleases } from "../../services/movies";
     
 
     
@@ -11,14 +11,14 @@ import { getAllMovieUpcoming } from "../../services/movies";
     
     useEffect(() => {
             
-        getAllMovieUpcoming().then(response => {
+        getAllLatestReleases().then(response => {
         setMovies(response.results)})
         
     }, []);
     
         return(
             <Layout>
-                <GridMovies items={movies} text={"Movie Upcoming"} />
+                <GridMovies items={movies} text={"Latest Releases"} />
             </Layout>
         )
         
