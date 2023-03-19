@@ -38,3 +38,9 @@ export type DetailsType ={
     items: [] | any
 }
 
+//type para search
+
+export type Props = {
+    onSearch: (text: string) => void
+}
+

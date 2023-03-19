@@ -1,4 +1,5 @@
 import { Layout } from "../../components"
+import { Search } from "./"
 
 const Buscador  = () => {
 
