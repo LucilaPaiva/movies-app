@@ -11,6 +11,7 @@ type Props = {
 
 const Search: FC<Props> = ({ onSearch }) => { //resuelve el componente desde donde llega esta Prop
   const [fields, setFields] = useState(defaultValues);
+  //el set fields me permite usar este estado que va a ir cambiando
 
   useEffect(() => {
     onSearch(fields);

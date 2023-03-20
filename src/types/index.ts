@@ -29,7 +29,7 @@ export type SliderPosters ={
 
 export type GridCardPosters ={
     items: [] | any
-    text: string
+    text?: string
 };
 
 // type para details

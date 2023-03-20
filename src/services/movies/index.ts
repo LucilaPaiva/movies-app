@@ -23,8 +23,9 @@ const getAllTopRated = async () => {
   return response.data;
 };
 
-const getSearchMovie = async (params: {query: string | null}) => {
-  const response = await apiMovies.get(endpoints.SEARCH_MOVIE, {params});
+const getSearchMovie = async (query: string | null) => {
+  const response = await apiMovies.get(endpoints.SEARCH_MOVIE, {params:
+    {query: query}});
   return response.data;
 };
 
@@ -37,11 +38,6 @@ const getById = async (id: string) => {
   const response = await apiMovies.get(`/movie/${id}`);
   return response.data;
 };
-
-
-
-
-
 
   // MOVIE_POPULAR: '/movie/popular', //populares.
   // MOVIE_LATEST: '/movie/latest', //últimos lanzamientos/latest releases.
