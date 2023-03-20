@@ -23,8 +23,8 @@ const getAllTopRated = async () => {
   return response.data;
 };
 
-const getSearchMovie = async () => {
-  const response = await apiMovies.get(endpoints.SEARCH_MOVIE);
+const getSearchMovie = async (params: {query: string | null}) => {
+  const response = await apiMovies.get(endpoints.SEARCH_MOVIE, {params});
   return response.data;
 };
 
@@ -37,6 +37,9 @@ const getById = async (id: string) => {
   const response = await apiMovies.get(`/movie/${id}`);
   return response.data;
 };
+
+
+
 
 
 
