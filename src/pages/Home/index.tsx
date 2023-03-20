@@ -14,7 +14,7 @@ const Home = () => {
 
   useEffect(() => {
 
-    getBanner().then(response => setMovies(response.splice(0,6)))
+    getBanner().then(response => setMovies(response.splice(0,8)))
     getAllPopular().then(response => setPopular(response.results))
     getAllTopRated().then(response => setTopRated(response.results))
 
@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <Layout>
         <Banner items={movies}/>
-        <Posters items={popular} text={"Popular Movies"}/>
+        <Posters items={popular} text={"Populars Movies"}/>
         <Posters items={topRated} text={"Top Rated Movies"}/>
     </Layout>
   );
