@@ -1,5 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import { FormsFields  } from "../../../types";
+import "./styles.scss"
 
 const defaultValues: FormsFields = {
   query: "",
@@ -18,13 +19,13 @@ const Search: FC<Props> = ({ onSearch }) => { //resuelve el componente desde don
   }, [fields]);
 
   return (
-    <form action="mb-5">
-      <div className="form-group mb-3">
-        <label htmlFor="">Search</label>
+    <form action="mb-5 container-form">
+      <div className="form-group  my-form mb-3">
+        <label className="search">Search</label>
         <input
           type="text"
           name="text"
-          className="Form-control"
+          className="Form-control my-form-control"
           value={fields.query}
           onChange={(e) => setFields({...fields, query: e.target.value})}
         />
