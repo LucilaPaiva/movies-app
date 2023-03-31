@@ -1,5 +1,5 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import { BetterMovies, Buscador, Home, LatestReleases, Login, Logout, Populars, Registro,  } from "./pages";
+import { BetterMovies, Buscador, DetailsPage, Home, LatestReleases, Login, Logout, Populars, Registro,  } from "./pages";
 
 
 
@@ -16,6 +16,8 @@ function App() {
           <Route path="logout" element={ <Logout /> } />
           <Route path="betterMovies" element={ <BetterMovies /> } />
           <Route path="buscador" element={ <Buscador /> } />
+          <Route path="movie/:id" element={ <DetailsPage /> } />
+          
         </Route>
       </Routes>
     </BrowserRouter>

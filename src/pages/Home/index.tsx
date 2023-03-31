@@ -26,8 +26,8 @@ const Home = () => {
   return (
     <Layout>
         <Banner items={movies}/>
-        <Posters items={popular} text={"Populars Movies"}/>
-        <Posters items={topRated} text={"Top Rated Movies"}/>
+        <Posters items={popular} text={"Popular Movies"}/>
+        <Posters items={topRated} text={"Better Movies"}/>
     </Layout>
   );
 };
