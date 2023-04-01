@@ -22,7 +22,6 @@ const Home = () => {
   }, []);
 
 
-
   return (
     <Layout>
         <Banner items={movies}/>

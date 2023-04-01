@@ -1,10 +1,10 @@
 import { Carousel } from "react-bootstrap";
 import "./styles.scss";
-import { SliderBanner } from "../../../types";
+import { InfoMovies } from "../../../types";
 import { FC } from "react";
 import { BASE_IMAGE } from "../../../constants";
 
-const Banner: FC<SliderBanner>= ({items}) => {
+const Banner: FC<InfoMovies>= ({items}) => {
 
 return(
     <Carousel className="carousel-container">

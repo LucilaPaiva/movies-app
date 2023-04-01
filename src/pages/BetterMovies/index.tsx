@@ -3,7 +3,7 @@ import { Layout } from "../../components";
 import { GridMovies } from "../../components/commons/GridMovies";
 import { getAllTopRated } from "../../services/movies";
 
-    
+
    
 
     const BetterMovies  = () => {
