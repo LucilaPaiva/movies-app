@@ -14,33 +14,47 @@ export type SignUpForm = Omit<User, 'id'>
 
 // type para Banner
 
-export type SliderBanner = {
-    items: [] | any
+export type InfoMovies = {
+     items: Partial<Movie>[]
+     text?: string
 };
 
 // type para Posters
 
-export type SliderPosters ={
-    items: [] | any
-    text: string
-};
+// export type SliderPosters ={
+//     items: [] | any
+//     text: string
+// };
 
 //type para Grilla de Movies 
 
-export type GridCardPosters ={
-    items: [] | any
-    text?: string
-};
+// export type GridCardPosters ={
+//     items: [] | any
+//     text?: string
+// };
 
 // type para details
 
-export type DetailsType ={
-    items: [] | any
+// export type DetailsType ={
+//     items: [] | any
+// };
+
+
+export type Movie = {
+    title: string;
+    id: number;
+    poster_path: string;
+    overview: string;
+    backdrop_path?: string | null;
+    budget: string;
+    homepage: string;
+    release_date: string;
+    vote_count: number;
 };
 
 //type para search
 
 export type FormsFields = {
-    query: string 
+    query: string
 };
 
