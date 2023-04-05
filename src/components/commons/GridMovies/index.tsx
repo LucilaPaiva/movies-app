@@ -1,14 +1,14 @@
 import { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import { BASE_IMAGE } from "../../../constants";
-import { DetailsPage } from "../../../pages";
-import { GridCardPosters } from "../../../types";
+//import { DetailsPage } from "../../../pages";
+import { InfoMovies } from "../../../types";
 import './styles.scss';
 
 
 
 
-const GridMovies: FC<GridCardPosters> = ({ items, text}) =>{
+const GridMovies: FC<InfoMovies> = ({ items, text}) =>{
 
     const navigate = useNavigate();
 

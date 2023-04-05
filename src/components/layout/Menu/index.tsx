@@ -15,7 +15,7 @@ const Menu = () => {
             <NavLink className="nav-link" to="/latestReleases">Latest Releases</NavLink>
             <NavLink className="nav-link" to="/betterMovies">Better Movies</NavLink>
             <NavLink className="nav-link" to="/populars">Popular Movies</NavLink>
-            <NavLink className="nav-link" to="/buscador">Buscar</NavLink>
+            <NavLink className="nav-link" to="/buscador">Search</NavLink>
             <NavLink className="nav-link" to="/login">Login</NavLink>
             <NavLink className="nav-link" to="/logout">Logout</NavLink>
             <NavLink className="nav-link" to="/registro">Registro</NavLink>

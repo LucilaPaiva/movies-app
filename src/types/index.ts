@@ -10,31 +10,29 @@ export type  User = {
 
 export type SignUpForm = Omit<User, 'id'>
 
-
+export type Movie = {
+    title: string;
+    id: number;
+    poster_path: string;
+    overview: string;
+    backdrop_path?: string | null;
+    budget: string;
+    homepage: string;
+    release_date: string;
+    vote_count: number;
+};
 
 // type para Banner
 
-export type SliderBanner = {
-    items: [] | any
-}
+export type InfoMovies = {
+     items: Partial<Movie>[]
+     text?: string
+};
 
-// type para Posters
 
-export type SliderPosters ={
-    items: [] | any
-    text: string
-}
+//type para search
 
-//type para Grilla de Movies 
-
-export type GridCardPosters ={
-    items: [] | any
-    text: string
-}
-
-// type para details
-
-export type DetailsType ={
-    items: [] | any
-}
+export type FormsFields = {
+    query: string
+};
 

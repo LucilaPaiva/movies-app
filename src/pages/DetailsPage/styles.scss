@@ -1,0 +1,35 @@
+.container-detail{
+    width: 60%;
+    display: flex;
+    //padding-left: 2%;
+    filter:grayscale(20%);
+    margin: auto;
+}
+
+.img-detail{
+
+    margin: auto;
+    padding-left: 6%;
+
+
+        img {
+            width: 80%;
+            border-radius: 15px;
+            border: solid 15px;
+           
+
+            
+        }
+}
+
+.text-detail {
+    
+    color:  rgb(177, 189, 189);
+    margin: 4%;
+    
+    h3{
+        color:rgb(109, 106, 103);
+        padding: 3%;
+       
+    }
+}
