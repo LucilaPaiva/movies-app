@@ -10,18 +10,14 @@ type Props = {
 }
 
 const Layout: FC<Props> = ({ children }) => {
-  const { loginWithToken, me } = useMe();
-
-  useEffect(() => {
-    loginWithToken();
-  }, []);
-
+ 
   return (
     <>
       <Header />
-      {me && <Main>
+      <Main>
+      
           { children }
-      </Main>}
+      </Main>
 
       <Footer />
     </>

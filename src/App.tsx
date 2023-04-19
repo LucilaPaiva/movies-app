@@ -6,15 +6,23 @@ import {
   Home,
   LatestReleases,
   Login,
-  Logout,
   Populars,
   Registro,
 } from "./pages";
-import { AuthProvider, StoreProvider } from "./context";
+import { StoreProvider } from "./context";
+import { useMe } from "./hooks";
+import { useEffect } from "react";
 
 function App() {
+
+  const { loginWithToken } = useMe();
+
+  useEffect(() => {
+    loginWithToken();
+  }, []);
+
+
   return (
-    <AuthProvider>
       <StoreProvider>
         <BrowserRouter>
           <Routes>
@@ -24,7 +32,6 @@ function App() {
               <Route path="latestReleases" element={<LatestReleases />} />
               <Route path="populars" element={<Populars />} />
               <Route path="registro" element={<Registro />} />
-              <Route path="logout" element={<Logout />} />
               <Route path="betterMovies" element={<BetterMovies />} />
               <Route path="buscador" element={<Buscador />} />
               <Route path="movie/:id" element={<DetailsPage />} />
@@ -32,7 +39,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </StoreProvider>
-    </AuthProvider>
+    
   );
 }
 
