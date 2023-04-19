@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import { Layout } from "../../components";
 import { GridMovies } from "../../components/commons/GridMovies";
 import { getAllTopRated } from "../../services/movies";
+import { withAuth } from "../../hoc";
 
 
    
 
-    const BetterMovies  = () => {
+    const BetterMoviesPage  = () => {
 
         const [movies, setMovies] = useState([]);
     
@@ -25,4 +26,4 @@ import { getAllTopRated } from "../../services/movies";
         
     }
         
-export { BetterMovies }
+export const BetterMovies = withAuth(BetterMoviesPage);

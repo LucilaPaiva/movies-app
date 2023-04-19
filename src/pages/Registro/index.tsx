@@ -1,14 +1,15 @@
 import { Layout, SignUpForm } from "../../components"
+import { withAuth } from "../../hoc";
 
 
-const Registro  = () => {
+const RegistroPage  = () => {
 
     return(
         <Layout>
-            <SignUpForm /> 
+            <SignUpForm />
         </Layout>
     )
     
     }
     
-    export { Registro }
+    export const Registro = withAuth(RegistroPage);

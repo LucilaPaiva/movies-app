@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { AuthContext } from "../../context";
 import { tokenGenerator } from "../../helpers/tokenGenerator";
-import { servicesUser } from "../../";
 import { LoginForm, User } from "../../types";
+import { servicesUser } from "../../services/users";
 
 const useMe = () => {
   const { me, setMe } = useContext(AuthContext);

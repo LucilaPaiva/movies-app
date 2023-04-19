@@ -1,20 +1,27 @@
-import { FC, ReactNode } from "react";
+import { FC, ReactNode, useEffect } from "react";
 import { Footer } from "../Footer";
 import { Header } from "../Header"
 import { Main } from "../Main";
+import { useMe } from "../../../hooks";
 
 
 type Props = {
-  children: ReactNode 
+  children: ReactNode
 }
 
 const Layout: FC<Props> = ({ children }) => {
+  const { loginWithToken, me } = useMe();
+
+  useEffect(() => {
+    loginWithToken();
+  }, []);
+
   return (
     <>
       <Header />
-      <Main>
+      {me && <Main>
           { children }
-      </Main>
+      </Main>}
 
       <Footer />
     </>
