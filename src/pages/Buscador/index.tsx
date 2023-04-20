@@ -6,7 +6,7 @@ import { getSearchMovie } from "../../services/movies";
 import { FormsFields } from "../../types";
 import { withAuth } from "../../hoc";
 
-const buscadorPage  = () => {
+const BuscadorPage  = () => {
 
     const [movies, setMovies] = useState([]);
     const [params, setParams] = useState({query: ''})
@@ -22,7 +22,7 @@ const buscadorPage  = () => {
     getSearchMovie(query).then((data) =>{
     setMovies(data.results)
     })
-       
+
 }, [searchParams])
 
     const busqueda = (param: FormsFields) =>{
@@ -40,4 +40,4 @@ const buscadorPage  = () => {
 
 };
 
-export const Buscador = withAuth(buscadorPage);
+export const Buscador = withAuth(BuscadorPage);
