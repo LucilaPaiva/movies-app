@@ -13,7 +13,6 @@ root.render(
 <AuthProvider> 
   <App />
 </AuthProvider>
-   
-  
+
 );
 

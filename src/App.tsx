@@ -9,7 +9,7 @@ import {
   Populars,
   Registro,
 } from "./pages";
-import { StoreProvider } from "./context";
+// import { StoreProvider } from "./context";
 import { useMe } from "./hooks";
 import { useEffect } from "react";
 
@@ -23,7 +23,7 @@ function App() {
 
 
   return (
-      <StoreProvider>
+      
         <BrowserRouter>
           <Routes>
             <Route path="/">
@@ -38,9 +38,10 @@ function App() {
             </Route>
           </Routes>
         </BrowserRouter>
-      </StoreProvider>
     
   );
 }
+
+
 
 export default App;
