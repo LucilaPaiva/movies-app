@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Pagination } from "react-bootstrap";
 import { useSearchParams } from "react-router-dom";
+import './styles.scss';
 
 type Props = {
   page: string;
