@@ -4,10 +4,11 @@ import { Layout } from "../../components";
 import { BASE_IMAGE } from "../../constants";
 import { getAllLatestReleases } from "../../services/movies";
 import { Movie } from "../../types";
+import { withAuth } from "../../hoc";
     
 
     
-    const LatestReleases  = () => {
+    const LatestReleasesMoviesPage  = () => {
 
         const [movies, setMovies] = useState<Movie>();;
     
@@ -42,4 +43,4 @@ import { Movie } from "../../types";
         
     }
         
-    export { LatestReleases }
+    export const LatestReleases = withAuth(LatestReleasesMoviesPage);

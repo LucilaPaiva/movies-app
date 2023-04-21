@@ -4,8 +4,9 @@ import { Layout, Search } from "../../components"
 import { GridMovies } from "../../components/commons/GridMovies";
 import { getSearchMovie } from "../../services/movies";
 import { FormsFields } from "../../types";
+import { withAuth } from "../../hoc";
 
-const Buscador  = () => {
+const BuscadorPage  = () => {
 
     const [movies, setMovies] = useState([]);
     const [params, setParams] = useState({query: ''})
@@ -21,7 +22,7 @@ const Buscador  = () => {
     getSearchMovie(query).then((data) =>{
     setMovies(data.results)
     })
-       
+
 }, [searchParams])
 
     const busqueda = (param: FormsFields) =>{
@@ -39,4 +40,4 @@ const Buscador  = () => {
 
 };
 
-export { Buscador }
+export const Buscador = withAuth(BuscadorPage);

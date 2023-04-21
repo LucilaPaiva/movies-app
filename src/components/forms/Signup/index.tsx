@@ -4,22 +4,32 @@ import { useForm} from 'react-hook-form'
 import { servicesUser } from '../../../services/users'
 import { SignUpForm } from '../../../types'
 import "./styles.scss"
+import { validationSchema } from './validationSchema'
+import { defaultValues } from './defaultValue'
+import { useNavigate } from 'react-router'
 
 //import { api } from '../../../utils/axios'
 
 
 
-const SignUp = () => {
-
-    const { register, handleSubmit} = useForm<SignUpForm>()
-
-    const onSubmit = (data: SignUpForm) => {
-
-      servicesUser.add({...data})
-      
 
       //aca me voy a comunicar con el servicio de la API
-    }
+
+
+    const SignUp = () => {
+      const { register, handleSubmit, formState } = useForm<SignUpForm>({
+        defaultValues,
+        resolver: validationSchema
+      });
+      const navigate = useNavigate();
+    
+      const onSubmit = (data: SignUpForm) => {
+        servicesUser.add({
+          ...data,
+          birthdate: new Date(data.birthdate)
+        })
+        navigate('/');
+      };
 
     return(
     <Form className='form-signup' onSubmit={handleSubmit(onSubmit)}>
