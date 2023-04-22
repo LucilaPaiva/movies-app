@@ -27,7 +27,7 @@ const DetailsMoviesPage  = () => {
             <Layout>
                 <Container>
                 <div className="container-detail"
-                style={{ 
+                style={{
                     backgroundImage: `url(${BASE_IMAGE}${detail?.backdrop_path})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
