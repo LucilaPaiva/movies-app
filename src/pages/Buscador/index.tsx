@@ -5,6 +5,7 @@ import { GridMovies } from "../../components/commons/GridMovies";
 import { getSearchMovie } from "../../services/movies";
 import { FormsFields } from "../../types";
 import { withAuth } from "../../hoc";
+import './styles.scss';
 
 const BuscadorPage  = () => {
 
