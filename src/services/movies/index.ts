@@ -20,7 +20,7 @@ const getAllLatestReleases = async () => {
 };
 
 const getTopRated = async (params: { page?: string }) => {
-  const response = await apiMovies.get(endpoints.MOVIE_TOP_RATED);
+  const response = await apiMovies.get(endpoints.MOVIE_TOP_RATED,{params});
   return response.data;
 };
 
@@ -29,9 +29,6 @@ const getSearchMovie = async (query: string | null, page:string | null = "1") =>
     {query: query, page: page},});
   return response.data;
 };
-
-
-
 
 const getAllMovieUpcoming = async () => {
   const response = await apiMovies.get(endpoints.MOVIE_UPCOMING);
