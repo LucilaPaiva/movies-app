@@ -5,36 +5,47 @@ import { GridMovies } from "../../components/commons/GridMovies";
 import { getSearchMovie } from "../../services/movies";
 import { FormsFields } from "../../types";
 import { withAuth } from "../../hoc";
+import { PaginationAll } from "../../components/commons/Pagination";
 
 const BuscadorPage  = () => {
 
     const [movies, setMovies] = useState([]);
     const [params, setParams] = useState({query: ''})
     const [searchParams, setSearchParams] = useSearchParams();
+    const [page, setPage] = useState("1");
+    const [totalPages, setTotalPages] = useState("");
+    
+    
 
     useEffect(() =>{
         setSearchParams(params)
     }, [params])
 
     useEffect (() => {
-        const query = searchParams.get("query")
+        const query = searchParams.get("query");
+        const page = searchParams.get("page");
 
-    getSearchMovie(query).then((data) =>{
-    setMovies(data.results)
+    getSearchMovie(query, page).then((response) =>{
+    setMovies(response.results);
+    setTotalPages(response.total_pages);
+    setPage(response.page);
+
     })
 
-}, [searchParams])
+}, [searchParams]);
 
     const busqueda = (param: FormsFields) =>{
-        setParams((prevState) => ({...prevState, query: param.query})
-
-        )
+        setParams((prevState) => ({...prevState, query: param.query}));
+    const busquedaPage = (page: string) => {
+        setParams((prevState) => ({ ...prevState, page: page }));
+        };
     }
 
     return(
         <Layout>
             <Search onSearch={busqueda} />
             <GridMovies items={movies} />
+            <PaginationAll page={page} totalPages={totalPages} />
         </Layout>
     )
 

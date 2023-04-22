@@ -19,16 +19,19 @@ const getAllLatestReleases = async () => {
   return response.data;
 };
 
-const getAllTopRated = async () => {
+const getTopRated = async (params: { page?: string }) => {
   const response = await apiMovies.get(endpoints.MOVIE_TOP_RATED);
   return response.data;
 };
 
-const getSearchMovie = async (query: string | null) => {
+const getSearchMovie = async (query: string | null, page:string | null = "1") => {
   const response = await apiMovies.get(endpoints.SEARCH_MOVIE, {params:
-    {query: query}});
+    {query: query, page: page},});
   return response.data;
 };
+
+
+
 
 const getAllMovieUpcoming = async () => {
   const response = await apiMovies.get(endpoints.MOVIE_UPCOMING);
@@ -48,4 +51,4 @@ const getById = async (id: string) => {
 
 
 
-export { getPopular, getBanner, getAllLatestReleases, getAllTopRated, getSearchMovie, getAllMovieUpcoming, getById };
+export { getPopular, getBanner, getAllLatestReleases, getTopRated, getSearchMovie, getAllMovieUpcoming, getById };
