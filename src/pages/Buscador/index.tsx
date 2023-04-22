@@ -10,7 +10,7 @@ import { PaginationAll } from "../../components/commons/Pagination";
 const BuscadorPage  = () => {
 
     const [movies, setMovies] = useState([]);
-    const [params, setParams] = useState({query: ''})
+    const [params, setParams] = useState({ query: "", page: "1" })
     const [searchParams, setSearchParams] = useSearchParams();
     const [page, setPage] = useState("1");
     const [totalPages, setTotalPages] = useState("");
@@ -36,17 +36,19 @@ const BuscadorPage  = () => {
 
     const busqueda = (param: FormsFields) =>{
         setParams((prevState) => ({...prevState, query: param.query}));
+    };
+
     const busquedaPage = (page: string) => {
-        setParams((prevState) => ({ ...prevState, page: param.page }));
-        };
-    }
+        setParams((prevState) => ({ ...prevState, page: page }));
+    };
+    
 
     return(
         <Layout>
             <Search onSearch={busqueda} />
             <GridMovies items={movies} />
-            <PaginationAll page={page} totalPages={totalPages} />
-        </Layout>
+            <PaginationAll onClick={busquedaPage} page={page} totalPages={totalPages} />
+    </Layout>
     )
 
 };
