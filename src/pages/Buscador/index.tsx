@@ -37,7 +37,7 @@ const BuscadorPage  = () => {
     const busqueda = (param: FormsFields) =>{
         setParams((prevState) => ({...prevState, query: param.query}));
     const busquedaPage = (page: string) => {
-        setParams((prevState) => ({ ...prevState, page: page }));
+        setParams((prevState) => ({ ...prevState, page: param.page }));
         };
     }
 

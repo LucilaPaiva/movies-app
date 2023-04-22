@@ -17,7 +17,7 @@ const HomeMoviesPage = () => {
 
     getBanner().then(response => setMovies(response.splice(0,8)))
     getPopular({page:"1"}).then(response => setPopular(response.results))
-    getTopRated({page:"1"}).then(response => setTopRated(response.results))
+    getTopRated({page:"1"} ).then(response => setTopRated(response.results))
 
 
   }, []);
