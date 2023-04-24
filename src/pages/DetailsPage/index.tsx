@@ -6,10 +6,11 @@ import { BASE_IMAGE } from "../../constants";
 import { getById } from "../../services/movies";
 import { Movie } from "../../types";
 import './styles.scss';
+import { withAuth } from "../../hoc";
 
 
 
-const DetailsPage  = () => {
+const DetailsMoviesPage  = () => {
 
     const [detail, setDetails] = useState<Movie>();
     const { id } = useParams()
@@ -47,4 +48,4 @@ const DetailsPage  = () => {
 
 }
 
-export { DetailsPage }
+export const DetailsPage = withAuth(DetailsMoviesPage);
