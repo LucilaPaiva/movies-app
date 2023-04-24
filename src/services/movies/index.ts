@@ -8,24 +8,25 @@ const getBanner = async () => {
     return response.data.results;
 };
 
-const getAllPopular = async () => {
-    const response = await apiMovies.get(endpoints.MOVIE_POPULAR);
+const getPopular = async (params: { page?: string }) => {
+    const response = await apiMovies.get(endpoints.MOVIE_POPULAR, {params});
     return response.data;
   };
+
 
 const getAllLatestReleases = async () => {
   const response = await apiMovies.get(endpoints. MOVIE_LATEST);
   return response.data;
 };
 
-const getAllTopRated = async () => {
-  const response = await apiMovies.get(endpoints.MOVIE_TOP_RATED);
+const getTopRated = async (params: { page?: string }) => {
+  const response = await apiMovies.get(endpoints.MOVIE_TOP_RATED,{params});
   return response.data;
 };
 
-const getSearchMovie = async (query: string | null) => {
+const getSearchMovie = async (query: string | null, page:string | null = "1") => {
   const response = await apiMovies.get(endpoints.SEARCH_MOVIE, {params:
-    {query: query}});
+    {query: query, page: page},});
   return response.data;
 };
 
@@ -47,4 +48,4 @@ const getById = async (id: string) => {
 
 
 
-export { getAllPopular, getBanner, getAllLatestReleases, getAllTopRated, getSearchMovie, getAllMovieUpcoming, getById };
+export { getPopular, getBanner, getAllLatestReleases, getTopRated, getSearchMovie, getAllMovieUpcoming, getById };
