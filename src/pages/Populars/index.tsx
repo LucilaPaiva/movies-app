@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { Layout } from "../../components";
 import { GridMovies } from "../../components/commons/GridMovies";
 import { getAllPopular } from "../../services/movies";
+import { withAuth } from "../../hoc";
+import './styles.scss';
 
 
-const Populars  = () => {
+const PopularsMoviesPage  = () => {
 
     const [movies, setMovies] = useState([]);
 
@@ -25,4 +27,4 @@ useEffect(() => {
     
 }
     
-    export { Populars }
+export const Populars = withAuth(PopularsMoviesPage);

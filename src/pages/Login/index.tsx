@@ -1,14 +1,17 @@
-import { Layout } from "../../components"
 
-const Login  = () => {
+import { Layout } from "../../components"
+import { withAuth } from "../../hoc";
+import { Login as LoginForm } from "../../components/forms/Login";
+
+
+
+const LoginMoviesPage  = () => {
 
     return(
         <Layout>
-            Login
+                <LoginForm />
         </Layout>
-         
     )
     
     }
-     
-    export { Login }
+    export const Login = withAuth(LoginMoviesPage);

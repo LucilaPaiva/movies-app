@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import { Layout } from "../../components";
 import { getAllPopular, getBanner, getAllTopRated } from "../../services/movies";
 import { Banner } from "../../components/commons/Banner";
-import { Posters } from "../../components/commons/Posters";
+import { withAuth } from "../../hoc";
+import { Posters } from "../../components/commons";
 
 
 
 
-const Home = () => {
+const HomeMoviesPage = () => {
   const [movies, setMovies] = useState([]);
   const [popular, setPopular] = useState([]);
   const [topRated, setTopRated] = useState([]);
@@ -32,5 +33,4 @@ const Home = () => {
 };
 
 
-
-export { Home };
+export const Home = withAuth(HomeMoviesPage);
