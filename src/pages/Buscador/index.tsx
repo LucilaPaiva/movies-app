@@ -46,7 +46,7 @@ const BuscadorPage  = () => {
     return(
         <Layout>
             <Search onSearch={busqueda} />
-            <GridMovies items={movies} />
+            <GridMovies items={movies} clasName="grid"/>
             <PaginationAll onClick={busquedaPage} page={page} totalPages={totalPages} />
     </Layout>
     )

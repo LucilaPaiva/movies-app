@@ -38,6 +38,7 @@ export type Movie = {
 export type InfoMovies = {
      items: Partial<Movie>[]
      text?: string
+     clasName?:string
 };
 
 

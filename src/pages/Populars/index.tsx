@@ -22,7 +22,7 @@ const PopularsMoviesPage = () => {
 
   return (
     <Layout>
-      <GridMovies items={movies} text={"Popular Movies"} />
+      <GridMovies items={movies} text={"Popular Movies"} clasName="grid" />
       <PaginationAll page={page} totalPages={totalPages} />
     </Layout>
   );
