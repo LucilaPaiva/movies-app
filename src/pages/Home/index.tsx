@@ -3,7 +3,7 @@ import { Layout } from "../../components";
 import { getPopular, getBanner, getTopRated } from "../../services/movies";
 import { Banner } from "../../components/commons/Banner";
 import { withAuth } from "../../hoc";
-import { GridMovies, Posters } from "../../components/commons";
+import { GridMovies } from "../../components/commons";
 
 
 
