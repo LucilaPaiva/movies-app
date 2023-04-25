@@ -35,10 +35,13 @@ const getAllMovieUpcoming = async () => {
   return response.data;
 };
 
-const getById = async (id: string) => {
-  const response = await apiMovies.get(`/movie/${id}`);
+const getById = async (id: string, params?: {
+  append_to_response?: string | null;
+}) => {
+  const response = await apiMovies.get(`/movie/${id}`, {params,});
   return response.data;
 };
+
 
   // MOVIE_POPULAR: '/movie/popular', //populares.
   // MOVIE_LATEST: '/movie/latest', //últimos lanzamientos/latest releases.
