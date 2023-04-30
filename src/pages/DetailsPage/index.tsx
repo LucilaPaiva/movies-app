@@ -29,7 +29,7 @@ const DetailsMoviesPage = () => {
             backgroundImage: `url(${BASE_IMAGE}${detail?.backdrop_path})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            height: "100vh",
+            height: "80vh",
           }}
         >
           <div className="img-detail">
