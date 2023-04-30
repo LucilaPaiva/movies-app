@@ -31,7 +31,9 @@ export type Movie = {
     homepage: string;
     release_date: string;
     vote_count: number;
-    video?: Video[] | any
+    video?: Video[] | any;
+    videoId: string;
+    
 
 };
 
@@ -42,7 +44,8 @@ export type Video = {
 
   export type Details = {
     items: Partial<Movie>[] | any
-    video?: Video[] | any
+    // video?: Video[] | any
+    // videoId: string
 
   }
 
