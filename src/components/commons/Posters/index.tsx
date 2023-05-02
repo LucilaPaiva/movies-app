@@ -1,10 +1,15 @@
-import { FC } from 'react';
-import  { InfoMovies } from '../../../types';
-import { BASE_IMAGE } from '../../../constants';
-import './styles.scss';
-import { useNavigate } from 'react-router-dom';
+import { FC } from "react";
+import { useNavigate } from "react-router-dom";
+import { BASE_IMAGE } from "../../../constants";
+import { InfoMovies } from "../../../types";
+import "./styles.scss";
 
-const Posters: FC<InfoMovies> = ({ items, text }) => {
+
+
+
+
+
+const Posters: FC<InfoMovies> = ({ items, text}) =>{
 
     const navigate = useNavigate();
 
@@ -14,13 +19,15 @@ const Posters: FC<InfoMovies> = ({ items, text }) => {
             <div className="row pb-4">
                 {items.map((item: any) =>
                     <img className="col card-block" key={item.id} onClick={() => navigate(`/movie/${item.id}`)}
-                    src={`${BASE_IMAGE + item.poster_path}`} 
+                    src={`${BASE_IMAGE + item.poster_path}`}
                     alt= "First slide"
                     />
                 )}
             </div>
         </div>
-    )
+    );
 }
+
+
 
 export { Posters }

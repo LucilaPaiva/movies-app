@@ -7,6 +7,8 @@ import { FormsFields } from "../../types";
 import { withAuth } from "../../hoc";
 import { PaginationAll } from "../../components/commons/Pagination";
 
+
+
 const BuscadorPage  = () => {
 
     const [movies, setMovies] = useState([]);

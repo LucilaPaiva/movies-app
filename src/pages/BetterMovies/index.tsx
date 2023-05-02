@@ -6,6 +6,7 @@ import { withAuth } from "../../hoc";
 import { useSearchParams } from "react-router-dom";
 import { PaginationAll } from "../../components/commons/Pagination";
 
+
 const BetterMoviesPage = () => {
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState("");

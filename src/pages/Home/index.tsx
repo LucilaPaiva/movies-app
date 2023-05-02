@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { Layout } from "../../components";
 import { getPopular, getBanner, getTopRated } from "../../services/movies";
 import { Banner } from "../../components/commons/Banner";
-import { Posters } from "../../components/commons/Posters";
 import { withAuth } from "../../hoc";
+import { Posters } from "../../components/commons";
 
 
 
