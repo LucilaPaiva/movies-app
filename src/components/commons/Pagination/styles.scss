@@ -1,0 +1,42 @@
+.pagination-black {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .page-item {
+      &.active {
+        // background-color: #000;
+        border-color: #000;
+        a {
+          color: #fff;
+        }
+      }
+      &.disabled {
+        .page-link {
+          color: #aaa;
+          background-color: #fff;
+          border-color: #ddd;
+          cursor: not-allowed;
+        }
+      }
+    }
+  
+    .page-link {
+      color: #000;
+      background-color: #fff;
+      border-color: #ddd;
+  
+      &:hover {
+        // background-color: #eee;
+        border-color: #ddd;
+      }
+    }
+  
+    .page-link:first-child,
+    .page-link:last-child {
+      margin-left: 10px;
+      margin-right: 10px; 
+      
+      
+    }
+  }

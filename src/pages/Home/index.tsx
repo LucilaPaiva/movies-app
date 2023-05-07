@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Layout } from "../../components";
-import { getAllPopular, getBanner, getAllTopRated } from "../../services/movies";
+import { getPopular, getBanner, getTopRated } from "../../services/movies";
 import { Banner } from "../../components/commons/Banner";
 import { withAuth } from "../../hoc";
 import { Posters } from "../../components/commons";
@@ -16,8 +16,8 @@ const HomeMoviesPage = () => {
   useEffect(() => {
 
     getBanner().then(response => setMovies(response.splice(0,8)))
-    getAllPopular().then(response => setPopular(response.results))
-    getAllTopRated().then(response => setTopRated(response.results))
+    getPopular({page:"1"}).then(response => setPopular(response.results))
+    getTopRated({page:"1"} ).then(response => setTopRated(response.results))
 
 
   }, []);
