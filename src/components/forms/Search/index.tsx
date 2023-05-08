@@ -4,6 +4,7 @@ import "./styles.scss"
 
 const defaultValues: FormsFields = {
   query: "",
+  page: undefined
 };
 
 type Props = {

@@ -1,30 +1,32 @@
 import { useEffect, useState } from "react";
 import { Layout } from "../../components";
 import { GridMovies } from "../../components/commons/GridMovies";
-import { getAllPopular } from "../../services/movies";
+import { getPopular } from "../../services/movies";
 import { withAuth } from "../../hoc";
-import './styles.scss';
+import { useSearchParams } from "react-router-dom";
+import { PaginationAll } from "../../components/commons/Pagination";
 
 
-const PopularsMoviesPage  = () => {
+const PopularsMoviesPage = () => {
+  const [movies, setMovies] = useState([]);
+  const [page, setPage] = useState("");
+  const [totalPages, setTotalPages] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams();
 
-    const [movies, setMovies] = useState([]);
+  useEffect(() => {
+    getPopular({ page: searchParams.get("page") || "1" }).then((response) => {
+      setMovies(response.results);
+      setPage(response.page);
+      setTotalPages(response.total_pages);
+    });
+  }, [searchParams]);
 
-useEffect(() => {
+  return (
+    <Layout>
+      <GridMovies items={movies} text={"Popular Movies"} />
+      <PaginationAll page={page} totalPages={totalPages} />
+    </Layout>
+  );
+};
 
-        
-    getAllPopular().then(response => {
-    setMovies(response.results)})
-    
-}, []);
-
-
-    return(
-        <Layout>
-            <GridMovies items={movies} text={"Popular Movies"} />
-        </Layout>
-    )
-    
-}
-    
 export const Populars = withAuth(PopularsMoviesPage);

@@ -13,35 +13,37 @@ const Menu = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto my-nav">
-            {me && (
-              <div>
+            {me ? (
+              <>
                 <NavLink className="nav-link" to="/">
                   Home
                 </NavLink>
                 <NavLink className="nav-link" to="/latestReleases">
-                  Latest Releases
+                  Ultimo Lanzamiento
                 </NavLink>
                 <NavLink className="nav-link" to="/betterMovies">
-                  Better Movies
+                  Mejores Películas
                 </NavLink>
                 <NavLink className="nav-link" to="/populars">
-                  Popular Movies
+                  Populares
                 </NavLink>
                 <NavLink className="nav-link" to="/buscador">
-                  Search
+                  Buscador
                 </NavLink>
-              </div>
+                <Nav.Link className="nav-link" onClick={logout}>
+                  Cerrar sesión
+                </Nav.Link>
+              </>
+            ) : (
+              <>
+                <NavLink className="nav-link" to="/login">
+                  Login
+                </NavLink>
+                <NavLink className="nav-link" to="/registro">
+                  Registro
+                </NavLink>
+              </>
             )}
-
-            <NavLink className="nav-link" to="/login">
-              Login
-            </NavLink>
-            <Nav.Link className="nav-link" onClick={logout}>
-              Logout
-            </Nav.Link>
-            <NavLink className="nav-link" to="/registro">
-              Registro
-            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

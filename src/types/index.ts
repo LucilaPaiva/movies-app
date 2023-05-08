@@ -44,6 +44,7 @@ export type InfoMovies = {
 //type para search
 
 export type FormsFields = {
+    page: any
     query: string
 };
 

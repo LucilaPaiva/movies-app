@@ -23,7 +23,7 @@ const Login = () => {
     return (
         <div className="container-form-login ">
             <div className="container-sign-in">
-                <h3>Sign In</h3>
+                <h3>Log In</h3>
                 <Form onSubmit={handleSubmit(onSubmit)}>
 
                     <Form.Group className="mb-3" controlId="formBasicEmail">

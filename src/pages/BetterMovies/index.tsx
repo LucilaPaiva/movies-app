@@ -1,30 +1,32 @@
 import { useEffect, useState } from "react";
 import { Layout } from "../../components";
 import { GridMovies } from "../../components/commons/GridMovies";
-import { getAllTopRated } from "../../services/movies";
+import { getTopRated } from "../../services/movies";
 import { withAuth } from "../../hoc";
-import './styles.scss';
+import { useSearchParams } from "react-router-dom";
+import { PaginationAll } from "../../components/commons/Pagination";
 
 
-   
+const BetterMoviesPage = () => {
+  const [movies, setMovies] = useState([]);
+  const [page, setPage] = useState("");
+  const [totalPages, setTotalPages] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams();
 
-    const BetterMoviesPage  = () => {
+  useEffect(() => {
+    getTopRated({ page: searchParams.get("page") || "1" }).then((response) => {
+      setMovies(response.results);
+      setPage(response.page);
+    setTotalPages(response.total_pages);
+    });
+  }, [searchParams]);
 
-        const [movies, setMovies] = useState([]);
-    
-    useEffect(() => {
-            
-        getAllTopRated().then(response => {
-        setMovies(response.results)})
-        
-    }, []);
-    
-        return(
-            <Layout>
-                <GridMovies items={movies} text={"Better Movies"} />
-            </Layout>
-        )
-        
-    }
-        
+  return (
+    <Layout>
+      <GridMovies items={movies} text={"Better Movies"} />
+      <PaginationAll page={page} totalPages={totalPages} />
+    </Layout>
+  );
+};
+
 export const BetterMovies = withAuth(BetterMoviesPage);
