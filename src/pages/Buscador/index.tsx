@@ -6,6 +6,11 @@ import { getSearchMovie } from "../../services/movies";
 import { FormsFields } from "../../types";
 import { withAuth } from "../../hoc";
 import { PaginationAll } from "../../components/commons/Pagination";
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> main
 
 const BuscadorPage  = () => {
 

@@ -5,6 +5,10 @@ import { getTopRated } from "../../services/movies";
 import { withAuth } from "../../hoc";
 import { useSearchParams } from "react-router-dom";
 import { PaginationAll } from "../../components/commons/Pagination";
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 
 const BetterMoviesPage = () => {
   const [movies, setMovies] = useState([]);
