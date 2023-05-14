@@ -1,7 +1,7 @@
 .container-detail{
-    width: 60%;
+    width: 80%;
     display: flex;
-    //padding-left: 2%;
+    flex-direction: column;
     filter:grayscale(20%);
     margin: auto;
 }
@@ -13,23 +13,23 @@
 
 
         img {
-            width: 80%;
+            width: 20%;
             border-radius: 15px;
             border: solid 15px;
-           
-
-            
         }
 }
 
 .text-detail {
     
-    color:  rgb(177, 189, 189);
+    background-color: gray;
+    color:  rgb(225, 231, 231);
     margin: 4%;
     
     h3{
-        color:rgb(109, 106, 103);
+        background-color: gray;
+        color:rgb(236, 233, 230);
         padding: 3%;
        
     }
+
 }

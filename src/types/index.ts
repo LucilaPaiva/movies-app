@@ -31,7 +31,23 @@ export type Movie = {
     homepage: string;
     release_date: string;
     vote_count: number;
+    video?: Video[] | any;
+    videoId: string;
+    
+
 };
+
+export type Video = {
+    id: string
+    key: string
+  }
+
+  export type Details = {
+    items: Partial<Movie>[] | any
+    // video?: Video[] | any
+    // videoId: string
+
+  }
 
 // type para Banner
 

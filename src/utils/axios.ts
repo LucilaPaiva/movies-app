@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+
 const api = axios.create({
     baseURL: 'https://movies-app-5769d-default-rtdb.firebaseio.com/',
 
