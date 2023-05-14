@@ -3,7 +3,7 @@ import { Layout } from "../../components";
 import { getPopular, getBanner, getTopRated } from "../../services/movies";
 import { Banner } from "../../components/commons/Banner";
 import { withAuth } from "../../hoc";
-import { Posters } from "../../components/commons";
+import { GridMovies } from "../../components/commons";
 
 
 
@@ -26,8 +26,8 @@ const HomeMoviesPage = () => {
   return (
     <Layout>
         <Banner items={movies}/>
-        <Posters items={popular} text={"Popular Movies"}/>
-        <Posters items={topRated} text={"Better Movies"}/>
+        <GridMovies items={popular} text={"Popular Movies"} clasName="scroll"/>
+        <GridMovies items={topRated} text={"Better Movies"} clasName="scroll"/>
     </Layout>
   );
 };

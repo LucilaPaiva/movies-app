@@ -6,7 +6,6 @@ import { withAuth } from "../../hoc";
 import { useSearchParams } from "react-router-dom";
 import { PaginationAll } from "../../components/commons/Pagination";
 
-
 const BetterMoviesPage = () => {
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState("");
@@ -17,13 +16,13 @@ const BetterMoviesPage = () => {
     getTopRated({ page: searchParams.get("page") || "1" }).then((response) => {
       setMovies(response.results);
       setPage(response.page);
-    setTotalPages(response.total_pages);
+      setTotalPages(response.total_pages);
     });
   }, [searchParams]);
 
   return (
     <Layout>
-      <GridMovies items={movies} text={"Better Movies"} />
+      <GridMovies items={movies} text={"Better Movies"} clasName="grid" />
       <PaginationAll page={page} totalPages={totalPages} />
     </Layout>
   );

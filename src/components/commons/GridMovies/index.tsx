@@ -2,17 +2,18 @@ import { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import { BASE_IMAGE } from "../../../constants";
 import { InfoMovies } from "../../../types";
+import "./styles.scss";
 
 
 
 
 
-const GridMovies: FC<InfoMovies> = ({ items, text}) =>{
+const GridMovies: FC<InfoMovies> = ({ items, text, clasName}) =>{
 
     const navigate = useNavigate();
 
     return(
-        <div className="grid">
+        <div className={clasName}>
             <div className="title">{text}</div>
             <div className="row pb-4">
                 {items.map((item: any) =>
