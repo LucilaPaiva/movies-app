@@ -36,7 +36,7 @@ import { useNavigate } from 'react-router'
       <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label>Nombre</Form.Label>
         <Form.Control type="text" placeholder="Ingresar nombre" {...register('name')} />
-        <Form.Text className="text-danger my-text-danger">
+        <Form.Text className="text-danger my-text-danger">{formState.errors.name?.message}
           Los datos ingresados son incorrectos.
         </Form.Text>
       </Form.Group>
@@ -44,7 +44,7 @@ import { useNavigate } from 'react-router'
       <Form.Group className="mb-3" controlId="formBasicLastName">
         <Form.Label>Apellido</Form.Label>
         <Form.Control type="text" placeholder="Ingresar apellido" {...register('lastname')}/>
-        <Form.Text className="text-danger">
+        <Form.Text className="text-danger">{formState.errors.name?.message}
           Los datos ingresados son incorrectos.
         </Form.Text>
       </Form.Group>
@@ -52,7 +52,7 @@ import { useNavigate } from 'react-router'
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email</Form.Label>
         <Form.Control type="email" placeholder="Ingresar email" {...register('email')}/>
-        <Form.Text className="text-danger">
+        <Form.Text className="text-danger">{formState.errors.name?.message}
           Los datos ingresados son incorrectos.
         </Form.Text>
       </Form.Group>
@@ -60,7 +60,7 @@ import { useNavigate } from 'react-router'
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Password</Form.Label>
         <Form.Control type="password" placeholder="Ingresar password" {...register('password') }/>
-        <Form.Text className="text-danger">
+        <Form.Text className="text-danger">{formState.errors.name?.message}
           Los datos ingresados son incorrectos.
         </Form.Text>
       </Form.Group>
@@ -68,7 +68,7 @@ import { useNavigate } from 'react-router'
       <Form.Group className="mb-3" controlId="formBasicBirthdate">
         <Form.Label>Fecha de nacimiento</Form.Label>
         <Form.Control type="date" placeholder="Ingresar fecha de nacimiento" {...register('birthdate') }/>
-        <Form.Text className="text-danger">
+        <Form.Text className="text-danger">{formState.errors.name?.message}
           Los datos ingresados son incorrectos.
         </Form.Text>
       </Form.Group>

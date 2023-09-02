@@ -12,6 +12,7 @@ const PopularsMoviesPage = () => {
   const [page, setPage] = useState("");
   const [totalPages, setTotalPages] = useState("");
   const [searchParams, setSearchParams] = useSearchParams();
+  
 
   useEffect(() => {
     getPopular({ page: searchParams.get("page") || "1" }).then((response) => {

@@ -1,8 +1,8 @@
-import { FC, ReactNode, useEffect } from "react";
+import { FC, ReactNode } from "react";
 import { Footer } from "../Footer";
 import { Header } from "../Header"
 import { Main } from "../Main";
-import { useMe } from "../../../hooks";
+//import { useMe } from "../../../hooks";
 
 
 type Props = {

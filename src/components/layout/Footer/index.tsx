@@ -5,11 +5,11 @@ const Footer = () => {
     <footer>
       <div className="container">
         <div >
-          Hecho con 💜 por 
+          Hecho con 💜 por
           <a
             className="footer-link"
             href="https://github.com/LucilaPaiva"
-            target="_blank"
+            target="_blank" rel="noreferrer"
           >
              Lucila Paiva
           </a>

@@ -19,7 +19,7 @@ function App() {
 
   useEffect(() => {
     loginWithToken();
-  }, []);
+  }, [loginWithToken]);
 
 
   return (

@@ -1,7 +1,8 @@
 
 import { Layout } from "../../components"
+import { LoginForm } from "../../components/forms";
 import { withAuth } from "../../hoc";
-import { Login as LoginForm } from "../../components/forms/Login";
+
 
 
 
@@ -9,7 +10,7 @@ const LoginMoviesPage  = () => {
 
     return(
         <Layout>
-                <LoginForm />
+            <LoginForm />
         </Layout>
     )
     
