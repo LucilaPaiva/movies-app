@@ -19,7 +19,7 @@ import { useNavigate } from 'react-router'
     const SignUp = () => {
       const { register, handleSubmit, formState } = useForm<SignUpForm>({
         defaultValues,
-        resolver: validationSchema
+        //resolver: validationSchema
       });
       const navigate = useNavigate();
     
