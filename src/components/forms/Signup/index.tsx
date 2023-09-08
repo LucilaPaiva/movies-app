@@ -4,7 +4,7 @@ import { useForm} from 'react-hook-form'
 import { servicesUser } from '../../../services/users'
 import { SignUpForm } from '../../../types'
 import "./styles.scss"
-import { validationSchema } from './validationSchema'
+//import { validationSchema } from './validationSchema'
 import { defaultValues } from './defaultValue'
 import { useNavigate } from 'react-router'
 
