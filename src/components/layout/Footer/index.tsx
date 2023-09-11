@@ -1,17 +1,18 @@
 import "./styles.scss";
+import { BsGithub } from 'react-icons/bs';
 
 const Footer = () => {
   return (
     <footer>
       <div className="container">
         <div >
-          Hecho con 💜 por
+          Hecho con ♥ por
           <a
             className="footer-link"
             href="https://github.com/LucilaPaiva"
-            target="_blank" rel="noreferrer"
+            target="_blank"
           >
-             Lucila Paiva
+             Lucila Paiva <BsGithub />
           </a>
         </div>
       </div>
@@ -21,3 +22,4 @@ const Footer = () => {
 };
 
 export { Footer };
+

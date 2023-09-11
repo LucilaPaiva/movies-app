@@ -1,15 +1,46 @@
-.form-signup {
-        background-color: rgb(153, 136, 136);
-        background-image: linear-gradient(to right, rgba(83, 90, 85, 0.253), rgba(190, 187, 190, 0.192));
+
+// .container {
+//         position: relative;
+//       }
+      
+      
+//       .form-signup {
+//         position: relative;
+//         z-index: 1;
+//         background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para mejorar la legibilidad */
+//         width: 50%;
+//         margin: 5% auto;
+//         border-radius: 3%;
+//         padding: 2%;
+//         border: solid 4px #13392f;
+//         font-weight: bolder;
+//         color: #13392f;
+//       }
+      
+//       .custom-error-message {
+//         color: #1e2020;
+//       }
+
+.container {
+        position: relative;
+        // width: 100%;
+        // height: 100vh;
+      }
+      
+      .form-signup {
+        position: relative;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.8);
         width: 50%;
-        margin:5%;
-        margin-top: 3%;
+        margin: 5% auto;
         border-radius: 3%;
         padding: 2%;
-        border: solid 1.2px;
-        margin: auto;
-
-}
-
-
-
+        border: solid 4px #13392f;
+        font-weight: bolder;
+        color: #13392f;
+      }
+      
+      .custom-error-message {
+        color: #1e2020;
+      }
+      

@@ -1,64 +1,73 @@
-import Form from 'react-bootstrap/Form';
-import { useForm } from 'react-hook-form';
-import { NavLink } from 'react-router-dom';
-import { useMe } from '../../../hooks/useMe';
-import { LoginForm } from '../../../types';
-import './styles.scss';
-import { defaultValues } from './defaultValues';
-import { validationSchema } from './validationSchema';
-import { Button } from 'react-bootstrap';
+import Form from "react-bootstrap/Form";
+import { useForm } from "react-hook-form";
+import { NavLink } from "react-router-dom";
+import { useMe } from "../../../hooks/useMe";
+import { LoginForm } from "../../../types";
+import "./styles.scss";
+import { defaultValues } from "./defaultValues";
+import { validationSchema } from "./validationSchema";
+import { Button } from "react-bootstrap";
 
 const Login = () => {
+  const { register, handleSubmit, formState } = useForm<LoginForm>({
+    defaultValues,
+    resolver: validationSchema,
+  });
+  const { login } = useMe();
 
-    const { register, handleSubmit, formState } = useForm<LoginForm>({
-        defaultValues,
-        resolver: validationSchema
-    });
-    const { login } = useMe();
+  const onSubmit = (data: LoginForm) => {
+    login(data);
+  };
 
-    const onSubmit = (data: LoginForm) => {
-        login(data);
-    };
+  return (
+    <div className="container-form-login ">
+      <div className="container-image">
+        <img
+          src={`${process.env.PUBLIC_URL}/img/sl_121019_25870_46.jpg`}
+          alt="cine" className="login-image"
+        />
+      </div>
+      <div className="container-sign-in">
+        <h3>Log In</h3>
+        <Form onSubmit={handleSubmit(onSubmit)}>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
 
-    return (
-        <div className="container-form-login ">
-            <div className="container-sign-in">
-                <h3>Log In</h3>
-                <Form onSubmit={handleSubmit(onSubmit)}>
-
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Email address</Form.Label>
-
-                        <Form.Control
-                            type="email"
-                            placeholder="
+            <Form.Control
+              type="email"
+              placeholder="
                                 Enter email"
-                            {...register("email")}
-                        />
-                        <Form.Text className="text-danger">{formState.errors.email?.message}</Form.Text>
-                    </Form.Group>
+              {...register("email")}
+            />
+            <Form.Text className="text-danger">
+              {formState.errors.email?.message}
+            </Form.Text>
+          </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control
-                            type="password"
-                            placeholder="
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              type="password"
+              placeholder="
                                 Enter password"
-                            autoComplete="off"
-                            {...register("pass")}
-                        />
-                        <Form.Text className="text-danger">{formState.errors.pass?.message}</Form.Text>
+              autoComplete="off"
+              {...register("pass")}
+            />
+            <Form.Text className="text-danger">
+              {formState.errors.pass?.message}
+            </Form.Text>
+          </Form.Group>
 
-                    </Form.Group>
-
-                    <Button variant='form' type='submit' >Submit</Button>
-                    <div>
-                        <NavLink to="/forgot">Forgot your password?</NavLink>
-                    </div>
-                </Form>
-            </div>
-        </div>
-    )
-}
+          <Button variant="form" type="submit">
+            Submit
+          </Button>
+          <div>
+            <NavLink to="/forgot">Forgot your password?</NavLink>
+          </div>
+        </Form>
+      </div>
+    </div>
+  );
+};
 
 export { Login };

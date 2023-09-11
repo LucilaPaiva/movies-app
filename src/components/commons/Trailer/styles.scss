@@ -3,12 +3,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 15%;
-  width: 15%;
-}
+  width: 30%;
 
-.youtube-video {
-  width: 80%;
-  // max-width: 800px;
-  height: auto;
+
+  .youtube-video {
+    width: 75%;
+    margin-left: 5%;
+    
+  }
+
 }

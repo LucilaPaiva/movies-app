@@ -1,41 +1,52 @@
-.pagination-black {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    .page-item {
-      &.active {
-        // background-color: #000;
-        border-color: #000;
-        a {
-          color: #fff;
-        }
-      }
-      &.disabled {
-        .page-link {
-          color: #706c6c;
-          // background-color: #fff;
-          // border-color: #ddd;
-          cursor: not-allowed;
-        }
-      }
-    }
-  
-    .page-link {
-      color: #000;
-      background-color: #fff;
-      border-color: #ddd;
-  
-      &:hover {
-        background-color: #eee;
-        border-color: #ddd;
-      }
-    }
-  
-    .page-link:first-child,
-    .page-link:last-child {
-      margin-left: 10px;
-      margin-right: 10px;
 
+.pagination-black {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .page-item {
+    &.active {
+      background-color: transparent;
+      border: 2px solid #333;
+      a {
+        color: #00303b;
+        font-size: 1.2em;
+        padding: 0.5em 0.75em;
+      }
+    }
+
+    &.disabled {
+      .page-link {
+        color: #00303b;
+        cursor: not-allowed;
+      }
+    }
+
+    &:not(.active) {
+      background-color: transparent;
+    }
+
+    &:not(:first-child) {
+      margin-left: 5px;
     }
   }
+
+  .page-link {
+    background-color: transparent;
+    color: #000;
+    border: 2px solid #333;
+    font-size: 1.5em;
+    padding: 0.5em 0.75em;
+
+    &:hover {
+      background-color: #574c4c;
+      border-color: #ddd;
+    }
+  }
+}
+
+
+body .pagination-black .page-item:first-child {
+  background-color: transparent;
+}
+

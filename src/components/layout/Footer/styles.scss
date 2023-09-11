@@ -3,17 +3,19 @@ footer{
     background-color:  #183f3f;
     position: absolute;
     width: 100%;
-    color: white;
+    color: #b3b3b7;
     display: flex;
     padding: 2%;
-    font-weight: 1em;
+    font-weight: 1.5em;
     margin-top: auto;
+    font-family: cursive;
     
     
 
 
     .container{
-        font-size: 1em;
+        font-size: 1.5em;
+        height: 20%;
         
         div{
             display: flex;
