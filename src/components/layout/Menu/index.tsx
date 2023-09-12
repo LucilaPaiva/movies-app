@@ -2,35 +2,37 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import "./styles.scss";
 import { useMe } from "../../../hooks";
+import { BsFillCameraReelsFill } from "react-icons/bs";
 
 const Menu = () => {
   const { logout, me } = useMe();
 
   return (
     <Navbar bg="light" expand="lg">
-      <Container fluid className="container-nav">
+      <Container fluid>
         {/* <Navbar.Brand href="#home">Home</Navbar.Brand> */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse  className="container-nav" id="basic-navbar-nav">
           <Nav className="ms-auto my-nav">
             {me ? (
               <>
-                <NavLink className="nav-link" to="/">
-                  Home
+                <NavLink className="my-icon" to="/">
+                <BsFillCameraReelsFill />
+                {/* Home */}
                 </NavLink>
-                <NavLink className="nav-link" to="/latestReleases">
+                <NavLink className="nav-link my-nav-link" to="/latestReleases">
                   Ultimo Lanzamiento
                 </NavLink>
-                <NavLink className="nav-link" to="/betterMovies">
+                <NavLink className="nav-link my-nav-link" to="/betterMovies">
                   Mejores Películas
                 </NavLink>
-                <NavLink className="nav-link" to="/populars">
+                <NavLink className="nav-link my-nav-link" to="/populars">
                   Populares
                 </NavLink>
-                <NavLink className="nav-link" to="/buscador">
+                <NavLink className="nav-link my-nav-link" to="/buscador">
                   Buscador
                 </NavLink>
-                <Nav.Link className="nav-link" onClick={logout}>
+                <Nav.Link className="nav-link my-nav-link" onClick={logout}>
                   Cerrar sesión
                 </Nav.Link>
               </>

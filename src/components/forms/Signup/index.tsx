@@ -34,7 +34,6 @@ const SignUp = () => {
           style={{ width: '100%', height: 'auto' }}
         />
       </div>
-      
       <Form className="form-signup" onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Label>Nombre</Form.Label>

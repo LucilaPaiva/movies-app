@@ -1,6 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import { FormsFields  } from "../../../types";
 import "./styles.scss"
+import { BsSearch } from "react-icons/bs";
 
 const defaultValues: FormsFields = {
   query: "",
@@ -22,7 +23,10 @@ const Search: FC<Props> = ({ onSearch }) => { //resuelve el componente desde don
   return (
     <form action="mb-5 container-form">
       <div className="form-group  my-form mb-3">
-        <label className="search">Search</label>
+        <div className="container-icono-serch">
+          <label className="search">Search</label>
+          <div className="my-icon-serch"><BsSearch /></div>
+        </div>
         <input
           type="text"
           name="text"

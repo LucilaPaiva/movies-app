@@ -1,16 +1,45 @@
 
 .container-nav{
-    background-color: #183f3f;
-    //color: #b3b3b7;
+    background-color: #517474;
+    padding: 0.8%;
+    //margin-right: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //width: auto;
+    border-radius: 15px;
 }
 
     .my-nav{
 
         font-weight: 600;
-        font-size: 1.3em;
-        //color:  #194aac;
-        padding-bottom: 1.5%;
-        justify-content: end;
+        font-size: 1.2em;
+        font-family: cursive;
+        margin-right: 0.5%;
+        align-items: center;
+        justify-content: center;
+        background-color: #867189;
+        // padding: 1%;
+        border-radius: 15px;
+        width: 60%;
+
+    
+
+        .my-icon {
+            font-size: 3.5em;
+            color: #183f3f;
+            //padding: 0.5%;
+            margin-right: 0.8%;
+
+        }
+
+        
+        .my-icon:hover {
+            color: #2b5858;
+        }
+
+        .my-nav-link {
+            padding: 1%;
+        }
 
     }
-
