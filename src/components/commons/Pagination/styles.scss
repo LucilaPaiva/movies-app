@@ -2,51 +2,29 @@
 .pagination-black {
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin-bottom: 0px;
+  padding-bottom: 1em;
 
   .page-item {
+    .page-link {
+      color: #183f3f;
+      font-weight: bold;
+    }
+
     &.active {
-      background-color: transparent;
-      border: 2px solid #333;
-      a {
-        color: #00303b;
-        font-size: 1.2em;
-        padding: 0.5em 0.75em;
+      .page-link {
+        background-color: #b3b3b7;
+        ;
+        border-color: #183f3f;
       }
     }
 
     &.disabled {
       .page-link {
-        color: #00303b;
-        cursor: not-allowed;
+        color: #183f3f;
       }
     }
-
-    &:not(.active) {
-      background-color: transparent;
-    }
-
-    &:not(:first-child) {
-      margin-left: 5px;
-    }
-  }
-
-  .page-link {
-    background-color: transparent;
-    color: #000;
-    border: 2px solid #333;
-    font-size: 1.5em;
-    padding: 0.5em 0.75em;
-
-    &:hover {
-      background-color: #574c4c;
-      border-color: #ddd;
-    }
   }
 }
 
-
-body .pagination-black .page-item:first-child {
-  background-color: transparent;
-}
 
