@@ -1,20 +1,26 @@
-
 .pagination-black {
   display: flex;
   justify-content: center;
   margin-bottom: 0px;
   padding-bottom: 1em;
+  @media (min-width: 200px) and (max-width: 860px){
+    width: 10%;
+    margin: auto;
+  }
 
   .page-item {
     .page-link {
       color: #183f3f;
       font-weight: bold;
+      @media (min-width: 200px) and (max-width: 860px) {
+        font-size: 1em;
+        //width: 8%;
+      }
     }
 
     &.active {
       .page-link {
         background-color: #b3b3b7;
-        ;
         border-color: #183f3f;
       }
     }
@@ -25,6 +31,8 @@
       }
     }
   }
+
 }
+
 
 

@@ -26,9 +26,13 @@ const Trailer: React.FC<TrailerProps> = ({ movieTitle }) => {
   }, [movieTitle]);
 
   return (
-    <div className="trailer-container">
+    <div className="trailer-container" style={{ width: "30%" }}>
       {videoId ? (
-        <YouTube videoId={videoId} className="youtube-video" />
+        <YouTube
+          videoId={videoId}
+          className="youtube-video"
+          style={{ width: "100%", marginLeft: "10%" }}
+        />
       ) : (
         <p>Trailer not available</p>
       )}
@@ -37,6 +41,3 @@ const Trailer: React.FC<TrailerProps> = ({ movieTitle }) => {
 };
 
 export default Trailer;
-
-
-

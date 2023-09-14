@@ -16,10 +16,23 @@ footer{
     .container{
         font-size: 1.5em;
         height: 20%;
+
+        @media (min-width: 200px) and (max-width: 570px){
+            font-size: 1.3em;
+            height: 12%;
+        }
         
         div{
             display: flex;
             justify-content: center;
+
+            @media (min-width: 200px) and (max-width: 570px) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: 1em;
+              }
             
         }
         
@@ -30,6 +43,9 @@ footer{
             color: aliceblue;
             text-decoration: none;
             margin-left: 0.5%;
+            @media (min-width: 200px) and (max-width: 570px) {
+                font-size: 0.8em;
+              }
             
 
     }
@@ -39,8 +55,5 @@ footer{
         text-decoration: none;
 
     }
-
-
-
 
 }
